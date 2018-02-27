@@ -73,7 +73,7 @@ function listBranches() {
       );
       table.push([
         index,
-        blue(repoName.toUpperCase()),
+        blue(repoName),
         magenta(branchName),
         red(commitsBehind),
         green(commitsAhead)
