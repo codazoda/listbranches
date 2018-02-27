@@ -64,7 +64,7 @@ function listBranches() {
     }
 
     let table = new Table();
-    table.push(["Key", "Reop", "Branch", "Behind", "Ahead"]);
+    table.push(["Key", "Repo", "Branch", "Behind", "Ahead"]);
 
     for (const [index, repoName] of repoNames.entries()) {
       const repoPath = repos[repoName];
@@ -81,6 +81,8 @@ function listBranches() {
     }
 
     console.log(`${table.toString()}\n`);
+
+    /*
 
     // After we have output the branch info, let see
     // if we want to copy any of the repo info.
@@ -109,6 +111,9 @@ function listBranches() {
     rl.on("close", () => {
       console.log(cyan(`DONE!\n`));
     });
+
+    */
+    
   });
 }
 
