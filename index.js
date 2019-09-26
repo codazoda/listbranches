@@ -1,7 +1,7 @@
 const { homedir } = require("os");
 const { readFile } = require("fs");
 const { exec } = require("child_process");
-const { blue, magenta, green, red, cyan } = require("chalk");
+const { gray, magenta, green, red, cyan } = require("chalk");
 const Table = require("cli-table");
 const readline = require("readline");
 const ncp = require("copy-paste");
@@ -78,8 +78,8 @@ function listBranches() {
         repoPath
       );
       table.push([
-        index,
-        blue(repoName.toUpperCase()),
+        gray(index),
+        repoName,
         magenta(branchName),
         red(commitsBehind),
         green(commitsAhead)
